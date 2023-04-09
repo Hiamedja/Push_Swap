@@ -1,14 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tets.c                                             :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 18:28:04 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/03/14 18:35:22 by hiamedja         ###   ########.fr       */
+/*   Created: 2023/03/11 15:10:54 by hiamedja          #+#    #+#             */
+/*   Updated: 2023/04/09 15:44:02 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-if((*stack)->content > (*stack)->next->content && (*stack)->next->content < (*stack->next->next->content)
-    ft_sa(stack, flag);
+#include "push_swap_bonus.h"

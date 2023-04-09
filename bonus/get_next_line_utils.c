@@ -6,11 +6,12 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:41:04 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 23:25:17 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 15:59:40 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
+
 
 size_t	ft_strlen(const char *str)
 {

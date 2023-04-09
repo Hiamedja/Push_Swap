@@ -6,11 +6,11 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:28:58 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 23:25:05 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 15:59:34 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 char	*ft_save(char *str_sttc)
 {

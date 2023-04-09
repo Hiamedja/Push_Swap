@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 15:11:19 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 23:25:51 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 17:31:45 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ typedef struct s_list
 	char	**str;
 }	t_list;
 
+
+char	*get_next_line(int fd);
+size_t	ft_strlen(const char *str);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char *s1, char *s2);
 t_stack_a	*ft_newstack(int content);
 int			ft_nbcmp(const char *s1, const char *s2);
 int			ft_is_zero(char *av);
@@ -56,10 +61,9 @@ void		ft_sb(t_stack_a **b);
 void		ft_ss(t_stack_a **a, t_stack_a **b);
 char		**ft_split(char const *s, char c);
 void		ft_lstadd_back(t_stack_a **lst, t_stack_a *new);
-int			ft_atoi(const char *str);
+long long	ft_atoi(const char *str);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 int			check_sort(t_stack_a *stack);
-int			ft_isnum(char *av);
 int			ft_check_param(char **av);
 void		ft_error(void);
 int			ft_checksort(t_stack_a *stack);
@@ -81,9 +85,5 @@ void		ft_pa(t_stack_a **a, t_stack_a **b);
 void		ft_pb(t_stack_a **a, t_stack_a **b);
 void		ft_sort4_5(t_stack_a **stack_a, t_stack_a **stack_b);
 int			ft_position(t_stack_a *stack_a, int index);
-char		*get_next_line(int fd);
-size_t		ft_strlen(const char *str);
-char		*ft_strchr(const char *s, int c);
-char		*ft_strjoin(char *s1, char *s2);
-
+int	ft_isnum(char *av);
 # endif

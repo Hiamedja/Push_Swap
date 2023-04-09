@@ -6,11 +6,11 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 22:24:11 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 23:35:31 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 15:55:10 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	ft_check(t_stack_a **stack_a, t_stack_a **stack_b, char *str)
 {

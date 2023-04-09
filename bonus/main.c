@@ -6,11 +6,11 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 18:02:10 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 17:28:14 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 // int	ft_stack_size(t_stack_a *stack)
 // {
@@ -159,13 +159,17 @@ int	main(int ac, char **av)
 	t_stack_a	*a;
 	t_stack_a	*b;
 	char	**str;
-	int		*tab;
-	int		sizeofstack;
+	// int		*tab;
+	// int		sizeofstack;
 
 	a = NULL;
+	b = NULL;
+	
 	if (ac < 2)
 		return (0);
 	i = 1;
+	if (av[1][0] == '\0')
+		ft_error();
 	while (av[i])
 	{
 		j = 0;
@@ -178,12 +182,15 @@ int	main(int ac, char **av)
 	}
 	if (ft_check_double(a) == -1)
 		ft_error();
-	if (ft_checksort(a) != 0)
-		ft_error();
-	sizeofstack = ft_stack_size(a);
-	tab = ft_fillingtab(a, sizeofstack);
-	indexing(&a, tab, sizeofstack);
-	ft_sort(&a, &b, tab);
+	ft_checker(&a, &b);
+	if (ft_checksort(a) != 0 && ft_stack_size(b) == 0)
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
+	// sizeofstack = ft_stack_size(a);
+	// tab = ft_fillingtab(a, sizeofstack);
+	// indexing(&a, tab, sizeofstack);
+	//ft_sort(&a, &b, tab);
 	// while (b)
 	// {
 	// 	printf("%d---", (b)->count);
@@ -191,4 +198,5 @@ int	main(int ac, char **av)
 	// 	b = (b)->next;
 	// }
 	//printf("%d\n", ft_checksort(a));
+
 }

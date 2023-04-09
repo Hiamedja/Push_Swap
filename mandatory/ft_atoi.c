@@ -6,13 +6,13 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:27:07 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/03/14 17:27:38 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 16:42:32 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
 	int				i;
 	int				sign;

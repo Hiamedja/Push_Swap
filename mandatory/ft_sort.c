@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:01:52 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 18:00:11 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 16:53:27 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	ft_sort2(t_stack_a *stack)
 	ft_sa(&stack);
 	while (stack)
 	{
-		printf("%d----\n", stack->count);
 		stack = stack->next;
 	}
 }
@@ -163,12 +162,12 @@ void	ft_sort(t_stack_a **stack_a, t_stack_a **stack_b, int *tab)
 		ft_sort4_5(stack_a, stack_b);
 	else if (ft_stack_size(*stack_a) >= 10 && ft_stack_size(*stack_a) <= 100)
 	{
-		ft_sort100(stack_a, stack_b, tab, 6);
+		ft_sort100(stack_a, stack_b, tab, 14);
 		ft_finalsort(stack_b, stack_a);
 	}
 	else
 	{
-		ft_sort100(stack_a, stack_b, tab, 25);
+		ft_sort100(stack_a, stack_b, tab, 35);
 		ft_finalsort(stack_b, stack_a);
 	}
 }
