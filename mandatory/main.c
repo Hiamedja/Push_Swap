@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 17:24:18 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 21:21:20 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ t_stack_a	*ft_parse_arguments(char **av, int ac)
 	{
 		j = 0;
 		str = ft_split(av[i], ' ');
+		if (str[j] == '\0')
+			ft_error();
 		if (ft_check_param(str) == 0)
 			ft_error();
 		while (str[j])
@@ -109,6 +111,6 @@ int	main(int ac, char **av)
 	tab = ft_fillingtab(a, sizeofstack);
 	indexing(&a, tab, sizeofstack);
 	ft_sort(&a, &b, tab);
-	free(tab);
+	// free(tab);
 	system("leaks push_swap");
 }

@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 17:23:59 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 20:17:45 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ t_stack_a	*ft_parse_arguments(char **av, int ac)
 	{
 		j = 0;
 		str = ft_split(av[i], ' ');
+		if (str[j] == '\0')
+			ft_error();
 		if (ft_check_param(str) == 0)
 			ft_error();
 		while (str[j])

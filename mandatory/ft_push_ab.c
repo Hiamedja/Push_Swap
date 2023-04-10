@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 22:03:01 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 22:57:51 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 20:22:27 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_pb(t_stack_a **a, t_stack_a **b)
 	t_stack_a	*temp;
 
 	if (!*a)
-		return ;
+		ft_error();
 	else
 	{
 		temp = (*a);
@@ -47,7 +47,7 @@ void	ft_pa(t_stack_a **a, t_stack_a **b)
 	t_stack_a	*temp;
 
 	if (!*b)
-		return ;
+		ft_error();
 	else
 	{
 		temp = (*b);
