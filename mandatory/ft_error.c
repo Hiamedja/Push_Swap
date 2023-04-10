@@ -12,21 +12,9 @@
 
 #include "push_swap.h"
 
-void	ft_freestack(t_stack_a **stack)
-{
-	t_stack_a	*temp;
-
-	while (*stack)
-	{
-		temp = (*stack)->next;
-		free(*stack);
-		*stack = temp;
-	}
-	stack = NULL;
-}
-
 void	ft_error(void)
 {
+
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }

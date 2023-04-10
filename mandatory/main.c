@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 01:14:53 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 16:34:12 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,19 @@ void	indexing(t_stack_a **stack2, int *tab, int size)
 	}
 }
 
+void	ft_free(char **str)
+{
+	int	i ;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
 t_stack_a	*ft_parse_arguments(char **av, int ac)
 {
 	int			i;
@@ -72,6 +85,7 @@ t_stack_a	*ft_parse_arguments(char **av, int ac)
 		while (str[j])
 			ft_lstadd_back(&stack, ft_newstack(ft_atoi(str[j++])));
 		i++;
+		ft_free(str);
 	}
 	if (ft_check_double(stack) == -1)
 		ft_error();
@@ -95,15 +109,6 @@ int	main(int ac, char **av)
 	tab = ft_fillingtab(a, sizeofstack);
 	indexing(&a, tab, sizeofstack);
 	ft_sort(&a, &b, tab);
-	ft_freestack(&a);
-	ft_freestack(&b);
 	free(tab);
+	system("leaks push_swap");
 }
-/////////////////////////////.while (1);
-// while (b)
-// {
-// 	printf("%d---", (b)->count);
-// 	printf("%d\n",(b)->index);
-// 	b = (b)->next;
-// }
-//printf("%d\n", ft_checksort(a));

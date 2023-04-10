@@ -6,11 +6,24 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 01:20:47 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 16:35:17 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+void	ft_free(char **str)
+{
+	int	i ;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
 
 t_stack_a	*ft_parse_arguments(char **av, int ac)
 {
@@ -30,6 +43,7 @@ t_stack_a	*ft_parse_arguments(char **av, int ac)
 		while (str[j])
 			ft_lstadd_back(&stack, ft_newstack(ft_atoi(str[j++])));
 		i++;
+		ft_free(str);
 	}
 	if (ft_check_double(stack) == -1)
 		ft_error();
@@ -51,4 +65,5 @@ int	main(int ac, char **av)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
+	system("leaks checker");
 }

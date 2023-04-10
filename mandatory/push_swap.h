@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 15:11:19 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 15:22:48 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 16:36:08 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ char					*ft_strjoin(char *s1, char *s2);
 t_stack_a				*ft_newstack(int content);
 int						ft_nbcmp(const char *s1, const char *s2);
 int						ft_is_zero(char *av);
-void					ft_freestack(t_stack_a **stack);
 void					ft_sort(t_stack_a **stack_a, t_stack_a **stack_b,
 							int *tab);
 void					ft_sort3(t_stack_a **stack);
