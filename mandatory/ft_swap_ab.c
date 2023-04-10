@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 20:17:14 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/06 17:16:05 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 15:17:23 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	ft_sb(t_stack_a **b)
 	int	temp;
 
 	temp = (*b)->count;
-	(*b)->count = (*b)->next->count;
-	(*b)->next->count = temp; 
+	(*b)->count = ((*b)->next)->count;
+	((*b)->next)->count = temp;
 	write(1, "sb\n", 3);
 }
 

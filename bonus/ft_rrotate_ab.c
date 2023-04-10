@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:33:11 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 16:09:10 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 01:15:55 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_rrb(t_stack_a **b)
 	ft_rrotate_ab(b);
 }
 
-void	ft_rrr(t_stack_a **a,t_stack_a **b)
+void	ft_rrr(t_stack_a **a, t_stack_a **b)
 {
 	ft_rra(a);
 	ft_rrb(b);

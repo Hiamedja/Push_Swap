@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 20:17:14 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 22:55:42 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 01:16:12 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_sb(t_stack_a **b)
 
 	temp = (*b)->count;
 	(*b)->count = (*b)->next->count;
-	(*b)->next->count = temp; 
+	(*b)->next->count = temp;
 }
 
 void	ft_ss(t_stack_a **a, t_stack_a **b)

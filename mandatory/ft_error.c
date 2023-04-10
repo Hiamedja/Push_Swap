@@ -27,10 +27,6 @@ void	ft_freestack(t_stack_a **stack)
 
 void	ft_error(void)
 {
-	// if (a == NULL || *a != NULL)
-	// 	ft_freestack(a);
-	// if (b == NULL || *b != NULL)
-	// 	ft_freestack(b);
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }

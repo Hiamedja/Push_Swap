@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 15:11:19 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 00:53:29 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/10 15:22:48 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,9 @@ t_stack_a				*ft_newstack(int content);
 int						ft_checksort(t_stack_a *stack);
 void					ft_swap(int *a, int *b);
 void					sort_tab(int *tab, int len);
+int						ft_stack_size(t_stack_a *stack);
+void					ft_sort2(t_stack_a *stack);
+void					ft_sort3(t_stack_a **stack);
+int						find_low_numb(t_stack_a *a);
 
 #endif
