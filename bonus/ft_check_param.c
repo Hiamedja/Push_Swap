@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:26:34 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 17:30:56 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 22:54:29 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isnum(char *av)
 {
-	int	i;
+	int			i;
 	long long	nb;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 22:03:01 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/08 23:25:55 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 22:57:51 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	lst_addfront(t_stack_a **stack_a, t_stack_a *new)
 
 void	ft_pb(t_stack_a **a, t_stack_a **b)
 {
-	t_stack_a *temp;
+	t_stack_a	*temp;
 
 	if (!*a)
 		return ;

@@ -6,12 +6,11 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 20:17:14 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 16:09:16 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 22:55:42 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-
 
 void	ft_sa(t_stack_a **a)
 {

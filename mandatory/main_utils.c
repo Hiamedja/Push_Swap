@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 22:56:55 by hiamedja         ###   ########.fr       */
+/*   Created: 2023/04/10 00:43:18 by hiamedja          #+#    #+#             */
+/*   Updated: 2023/04/10 00:44:18 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
-
-int	ft_stack_size(t_stack_a *stack)
-{
-	int	i;
-
-	i = 0;
-	if (!stack)
-		return (0);
-	while (stack)
-	{
-		(stack) = (stack)->next;
-		i++;
-	}
-	return (i);
-}
+#include "push_swap.h"
 
 int	ft_check_double(t_stack_a *stack_a)
 {
@@ -79,37 +64,33 @@ int	ft_checksort(t_stack_a *stack)
 	return (1);
 }
 
-
-int	main(int ac, char **av)
+void	ft_swap(int *a, int *b)
 {
-	int			i;
-	int			j;
-	t_stack_a	*a;
-	t_stack_a	*b;
-	char		**str;
+	int	tmp;
 
-	a = NULL;
-	b = NULL;
-	if (ac < 2)
-		return (0);
-	i = 1;
-	if (av[1][0] == '\0')
-		ft_error();
-	while (av[i])
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+void	sort_tab(int *tab, int len)
+{
+	int	i;
+	int	j;
+	int	min;
+
+	i = 0;
+	while (i < len - 1)
 	{
-		j = 0;
-		str = ft_split(av[i], ' ');
-		if (ft_check_param(str) == 0)
-			ft_error();
-		while (str[j])
-			ft_lstadd_back(&a, ft_newstack(ft_atoi(str[j++])));
+		min = i;
+		j = i + 1;
+		while (j < len)
+		{
+			if (tab[j] < tab[min])
+				min = j;
+			j++;
+		}
+		ft_swap(&tab[i], &tab[min]);
 		i++;
 	}
-	if (ft_check_double(a) == -1)
-		ft_error();
-	ft_checker(&a, &b);
-	if (ft_checksort(a) != 0 && ft_stack_size(b) == 0)
-		write(1, "OK\n", 3);
-	else
-		write(1, "KO\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:01:52 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/09 16:53:27 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/09 23:00:42 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,8 @@ void	ft_sort4_5(t_stack_a **stack_a, t_stack_a **stack_b)
 
 void	ft_finalsort(t_stack_a **stack_b, t_stack_a **stack_a)
 {
-	int i;
-	int size;
+	int	i;
+	int	size;
 
 	size = ft_stack_size(*stack_b);
 	while (size > 0)
@@ -126,17 +126,15 @@ void	ft_sort100(t_stack_a **stack_a, t_stack_a **stack_b, int *tab, int num)
 {
 	int	i;
 	int	size_a;
-	int	size_b;
 
 	i = 0;
 	size_a = ft_stack_size(*stack_a);
 	while (size_a > 0)
 	{
-		size_b = ft_stack_size(*stack_b);
 		if ((*stack_a)->count <= tab[i])
 		{
 			ft_pb(stack_a, stack_b);
-			if (size_b > 2)
+			if (ft_stack_size(*stack_b) > 2)
 				ft_rb(stack_b);
 			size_a--;
 			i++;

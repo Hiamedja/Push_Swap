@@ -6,7 +6,7 @@
 #    By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/11 13:01:21 by hiamedja          #+#    #+#              #
-#    Updated: 2023/04/09 16:02:03 by hiamedja         ###   ########.fr        #
+#    Updated: 2023/04/10 00:46:30 by hiamedja         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAMEB = checker
 
 PUSH_SWAP.SRC = \
 	./mandatory/main.c				\
+	./mandatory/main_utils.c		\
 	./mandatory/ft_split.c			\
 	./mandatory/filling_stack.c		\
 	./mandatory/ft_atoi.c			\
@@ -37,15 +38,15 @@ PUSH_SWAP_BONUS.SRC = \
 	./bonus/ft_substr.c				\
 	./bonus/ft_check_param.c		\
 	./bonus/ft_error.c				\
-	./bonus/ft_sort.c				\
 	./bonus/ft_swap_ab.c			\
 	./bonus/ft_rotate_ab.c			\
 	./bonus/ft_rrotate_ab.c			\
 	./bonus/ft_push_ab.c			\
 	./bonus/ft_position.c			\
+	./bonus/checker.c 				\
 	./bonus/get_next_line.c			\
 	./bonus/get_next_line_utils.c	\
-	./bonus/checker.c 				\
+
 
 CC = cc
 
