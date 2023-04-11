@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 20:17:45 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/11 17:16:37 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_stack_a	*ft_parse_arguments(char **av, int ac)
 		ft_free(str);
 	}
 	if (ft_check_double(stack) == -1)
-		ft_error();
+		exit(EXIT_SUCCESS);
 	return (stack);
 }
 
