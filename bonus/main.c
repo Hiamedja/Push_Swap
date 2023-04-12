@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/11 17:16:37 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:13:22 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_stack_a	*ft_parse_arguments(char **av, int ac)
 		ft_free(str);
 	}
 	if (ft_check_double(stack) == -1)
-		exit(EXIT_SUCCESS);
+		ft_error ();
 	return (stack);
 }
 
@@ -67,4 +67,5 @@ int	main(int ac, char **av)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
+	system("leaks checker");
 }

@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:33:11 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/10 20:32:27 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:17:50 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,22 @@ void	ft_rrotate_ab(t_stack_a **stack)
 
 void	ft_rra(t_stack_a **a)
 {	
-	if (!*a)
-		ft_error();
+	if (!*a || ft_stack_size (*a) < 2)
+		return ;
 	ft_rrotate_ab(a);
 }
 
 void	ft_rrb(t_stack_a **b)
 {
-	if (!*b)
-		ft_error();
+	if (!*b || ft_stack_size (*b) < 2)
+		return ;
 	ft_rrotate_ab(b);
 }
 
 void	ft_rrr(t_stack_a **a, t_stack_a **b)
 {
-	if (!*a || !*b)
-		ft_error();
-	ft_rra(a);
-	ft_rrb(b);
+	if (!*a || ft_stack_size(*a) < 2 || !*b || ft_stack_size(*b) < 2)
+		return ;
+	ft_rrotate_ab(a);
+	ft_rrotate_ab(b);
 }
