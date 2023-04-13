@@ -6,7 +6,7 @@
 /*   By: hiamedja <hiamedja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 18:40:27 by hiamedja          #+#    #+#             */
-/*   Updated: 2023/04/12 18:09:40 by hiamedja         ###   ########.fr       */
+/*   Updated: 2023/04/13 14:03:32 by hiamedja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,4 @@ int	main(int ac, char **av)
 	indexing(&a, tab, sizeofstack);
 	ft_sort(&a, &b, tab);
 	free(tab);
-	system("leaks push_swap");
 }
